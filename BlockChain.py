@@ -1,3 +1,4 @@
+# -- coding: gbk --
 # {
 #     "index":0,  #块的索引
 #     "timestamp":"",     #时间戳
@@ -263,7 +264,7 @@ def register_nodes():
     return jsonify(response),201
 
 #可以调用解决冲突的路由
-@app.route('./nodes/resolve',methods = ['GET'])
+@app.route('/nodes/resolve',methods = ['GET'])
 def consensus():
     #调用函数并查看链条是否被取代了
     replaced = blockchain.resolve_conflicts()
